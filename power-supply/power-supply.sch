@@ -1,0 +1,187 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Linear:L7805 U1
+U 1 1 6026569A
+P 6450 2500
+F 0 "U1" H 6450 2742 50  0000 C CNN
+F 1 "L7805" H 6450 2651 50  0000 C CNN
+F 2 "" H 6475 2350 50  0001 L CIN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/41/4f/b3/b0/12/d4/47/88/CD00000444.pdf/files/CD00000444.pdf/jcr:content/translations/en.CD00000444.pdf" H 6450 2450 50  0001 C CNN
+	1    6450 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 60265D7F
+P 6050 3450
+F 0 "C2" H 6165 3496 50  0000 L CNN
+F 1 "10u" H 6165 3405 50  0000 L CNN
+F 2 "" H 6088 3300 50  0001 C CNN
+F 3 "~" H 6050 3450 50  0001 C CNN
+	1    6050 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 60265E4E
+P 6750 3450
+F 0 "C3" H 6865 3496 50  0000 L CNN
+F 1 "10u" H 6865 3405 50  0000 L CNN
+F 2 "" H 6788 3300 50  0001 C CNN
+F 3 "~" H 6750 3450 50  0001 C CNN
+	1    6750 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 60266273
+P 5750 3450
+F 0 "C1" H 5865 3496 50  0000 L CNN
+F 1 "680u" H 5865 3405 50  0000 L CNN
+F 2 "" H 5788 3300 50  0001 C CNN
+F 3 "~" H 5750 3450 50  0001 C CNN
+	1    5750 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60269251
+P 7100 2800
+F 0 "R1" V 6893 2800 50  0000 C CNN
+F 1 "220" V 6984 2800 50  0000 C CNN
+F 2 "" V 7030 2800 50  0001 C CNN
+F 3 "~" H 7100 2800 50  0001 C CNN
+	1    7100 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 6026DAB0
+P 6950 3150
+F 0 "D2" V 6989 3032 50  0000 R CNN
+F 1 "LED" V 6898 3032 50  0000 R CNN
+F 2 "" H 6950 3150 50  0001 C CNN
+F 3 "~" H 6950 3150 50  0001 C CNN
+	1    6950 3150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6950 2800 6950 3000
+Wire Wire Line
+	6950 3300 6950 3600
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 602702E2
+P 4500 3100
+F 0 "BT1" H 4618 3196 50  0000 L CNN
+F 1 "Battery_Cell" H 4618 3105 50  0000 L CNN
+F 2 "" V 4500 3160 50  0001 C CNN
+F 3 "~" V 4500 3160 50  0001 C CNN
+	1    4500 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 60272D2E
+P 4500 2650
+F 0 "D1" V 4454 2730 50  0000 L CNN
+F 1 "D_Schottky" V 4545 2730 50  0000 L CNN
+F 2 "" H 4500 2650 50  0001 C CNN
+F 3 "~" H 4500 2650 50  0001 C CNN
+	1    4500 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4500 2800 4500 2900
+$Comp
+L Device:Polyfuse F1
+U 1 1 6027402B
+P 4900 2300
+F 0 "F1" V 4675 2300 50  0000 C CNN
+F 1 "Polyfuse" V 4766 2300 50  0000 C CNN
+F 2 "" H 4950 2100 50  0001 L CNN
+F 3 "~" H 4900 2300 50  0001 C CNN
+	1    4900 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Switch:SW_DIP_x01 SW1
+U 1 1 602750AA
+P 5350 2300
+F 0 "SW1" H 5350 2567 50  0000 C CNN
+F 1 "SW_DIP_x01" H 5350 2476 50  0000 C CNN
+F 2 "" H 5350 2300 50  0001 C CNN
+F 3 "~" H 5350 2300 50  0001 C CNN
+	1    5350 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 2500 4500 2300
+Wire Wire Line
+	4500 2300 4750 2300
+Wire Wire Line
+	6450 2800 6450 3200
+Wire Wire Line
+	6450 3200 6300 3200
+Wire Wire Line
+	6300 3200 6300 3600
+Connection ~ 6300 3600
+Wire Wire Line
+	6300 3600 6050 3600
+Wire Wire Line
+	6050 2300 6050 2500
+Wire Wire Line
+	6050 2500 6150 2500
+Connection ~ 6050 2500
+Wire Wire Line
+	6050 2500 6050 3300
+$Comp
+L power:+5V #PWR0101
+U 1 1 6027DAF5
+P 7450 2800
+F 0 "#PWR0101" H 7450 2650 50  0001 C CNN
+F 1 "+5V" H 7465 2973 50  0000 C CNN
+F 2 "" H 7450 2800 50  0001 C CNN
+F 3 "" H 7450 2800 50  0001 C CNN
+	1    7450 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 2800 7450 2800
+Wire Wire Line
+	6950 3600 6750 3600
+Connection ~ 6750 3600
+Wire Wire Line
+	6300 3600 6750 3600
+Wire Wire Line
+	6750 2500 6750 3300
+Wire Wire Line
+	5750 3300 5750 2300
+Wire Wire Line
+	5650 2300 5750 2300
+Connection ~ 5750 2300
+Wire Wire Line
+	5750 2300 6050 2300
+Wire Wire Line
+	4500 3200 4500 3600
+Wire Wire Line
+	4500 3600 5750 3600
+Wire Wire Line
+	5750 3600 6050 3600
+Connection ~ 5750 3600
+Connection ~ 6050 3600
+$EndSCHEMATC
